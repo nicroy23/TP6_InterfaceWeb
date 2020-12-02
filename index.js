@@ -95,3 +95,63 @@ function changerHtmlMod11() {
   divCentre.appendChild(centreBisTemp);
   global.appendChild(divPied);
 }
+
+
+//--------------------------------- TP6 (jQuery) --------------------------------------//
+$(function() {
+  $("#img-1-p").mouseover(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-1-g").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-1-g").mouseout(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-1-p").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-2-p").mouseover(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-2-g").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-2-g").mouseout(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-2-p").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-3-p").mouseover(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-3-g").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-3-g").mouseout(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-3-p").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-4-p").mouseover(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-4-g").fadeIn(1000);
+    }, 1000);
+  });
+
+  $("#img-4-g").mouseout(function() {
+    $(this).fadeOut(1000);
+    setTimeout(() => {
+      $("#img-4-p").fadeIn(1000);
+    }, 1000);
+  });
+})
