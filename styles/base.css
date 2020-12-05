@@ -14,17 +14,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
 html {
-  font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
+  font-size: 100%;
+  /* Voir -> Note 1 à la fin de la feuille de styles. */
   -moz-tab-size: 4;
   tab-size: 4;
 }
+
 body {
   margin: 0;
-  padding: 10px 20px; /* Note -> 2 */
+  padding: 10px 20px;
+  /* Note -> 2 */
   /* NICOLAS: Modification faite par moi pour utiliser une police de caractère voulue sur le corps au complet. */
-  font-family: "Baloo Tammudu 2", cursive; /* 3 */
-  font-size: 0.9em; /* -> 4 */
-  line-height: 1.25; /* -> 5 */
+  font-family: "Baloo Tammudu 2", cursive;
+  /* 3 */
+  font-size: 0.9em;
+  /* -> 4 */
+  line-height: 1.25;
+  /* -> 5 */
   color: black;
   background: white;
 }
@@ -36,22 +42,30 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1em 0 0.5em 0; /* -> 6 */
+  margin: 1em 0 0.5em 0;
+  /* -> 6 */
 }
+
 h1,
 h2 {
-  font-weight: normal; /* -> 7 */
+  font-weight: normal;
+  /* -> 7 */
 }
+
 h1 {
-  font-size: 3em; /* -> 8 */
+  font-size: 3em;
+  /* -> 8 */
   font-style: italic;
 }
+
 h2 {
   font-size: 1.8em;
 }
+
 h3 {
   font-size: 1.2em;
 }
+
 h4 {
   font-size: 1em;
 }
@@ -60,11 +74,14 @@ h4 {
 ul,
 ol {
   margin: 0.75em 0 0.75em 24px;
-  padding: 0; /* -> 9 */
+  padding: 0;
+  /* -> 9 */
 }
+
 ul {
   list-style: square;
 }
+
 li {
   margin: 0;
   padding: 0;
@@ -74,6 +91,7 @@ li {
 p {
   margin: 0.75em 0;
 }
+
 li p,
 blockquote p {
   margin: 0.5em 0;
@@ -86,9 +104,11 @@ q {
   font-style: italic;
   font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
 }
+
 blockquote {
   margin: 0.75em 0 0.75em 24px;
 }
+
 cite {
   font-style: italic;
 }
@@ -97,6 +117,7 @@ cite {
 em {
   font-style: italic;
 }
+
 strong {
   font-weight: bold;
   color: dimgray;
@@ -109,6 +130,7 @@ code {
   font-size: 100%;
   font-family: "Bitstream Vera Mono", "Lucida Console", "Courier New", monospace;
 }
+
 pre {
   width: 90%;
   overflow: auto;
@@ -118,24 +140,29 @@ pre {
   background: #eee;
   color: #555;
 }
+
 pre strong {
   font-weight: normal;
   color: black;
 }
+
 #copyright {
   margin: 20px 0 5px 0;
   text-align: right;
   font-size: 0.8em;
   color: #848f63;
 }
+
 #copyright a {
   color: #848f63;
   text-decoration: none;
 }
+
 #copyright a:hover,
 #copyright a:focus {
   text-decoration: underline;
 }
+
 /* NICOLAS: Modification faite par moi pour ajouter des bordures au tableau. */
 table {
   border-collapse: collapse;
@@ -158,7 +185,8 @@ caption {
 
 /* NICOLAS: Classe personnelle créée pour modifier la conclusion (mettre flex et une direction des éléments.) */
 .conclusion {
-  display: flex; /* NICOLAS:  Appliqué le display flex a la liste pour affecter tous les éléments à l'intérieur. */
+  display: flex;
+  /* NICOLAS:  Appliqué le display flex a la liste pour affecter tous les éléments à l'intérieur. */
   flex-direction: column;
 }
 
@@ -204,7 +232,7 @@ caption {
   cursor: pointer;
 }
 
-#cache {
+/*#cache {
   position: absolute;
   background: rgba(0, 0, 0, 0);
   top: 0;
@@ -224,10 +252,10 @@ caption {
   left: 0;
   z-index: -1;
   transition: background 0.5s;
-}
+}*/
 
 /* L'image agrandie. */
-.popup {
+/*.popup {
   position: absolute;
   z-index: 1000;
   display: none;
@@ -241,10 +269,10 @@ caption {
   display: none;
   top: 300px;
   left: 650px;
-}
+}*/
 
 /* Le target se fait sur l'identifiant cache*/
-#cache:target {
+/*#cache:target {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -252,12 +280,13 @@ caption {
 #cache2:target {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
+}*/
 
 /*Sélectionne tout élément a qui est 
 descendant d’un élément popup*/
 
 /* À titre de représentation, je l'ai fait en css seulement aussi. Par contre, mes autres fichiers on des fonctions JavaScript pour éviter de tout répéter le code. */
+/*
 .popup a {
   position: absolute;
   background: #333;
@@ -286,13 +315,13 @@ descendant d’un élément popup*/
 
 /* Sélectionne tout élément popup qui est 
 Frère général du target (#cache:target) */
-#cache:target ~ .popup {
+#cache:target~.popup {
   display: block;
 
   border: 5px white double;
 }
 
-#cache2:target ~ .popup2 {
+#cache2:target~.popup2 {
   display: block;
 
   border: 5px white double;
@@ -364,15 +393,15 @@ gabarit.
   transition: 0.4s;
 }
 
-input:checked + .glisse {
+input:checked+.glisse {
   background-color: #3500d3;
 }
 
-input:focus + .glisse {
+input:focus+.glisse {
   box-shadow: 0 0 1px black;
 }
 
-input:checked + .glisse:before {
+input:checked+.glisse:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -404,4 +433,86 @@ input:checked + .glisse:before {
 
 .cache-img {
   display: none;
+}
+
+/* Menu-anime */
+#menu-anime {
+  margin: 0 auto 50px auto;
+  width: 1000px;
+  min-height: 130px;
+  text-align: center;
+  list-style: none;
+}
+
+#menu-anime li {
+  margin-right: 15px;
+  width: 160px;
+  height: 72px;
+  position: relative;
+}
+
+.item-menu:hover {
+  margin-left: 200px;
+}
+
+.menu-item > a, .menu-item > a:hover{
+  margin: 0 auto;
+  width: 122px; 
+  height: 59px;
+  padding-top: 15px;
+  text-indent: 0px;
+  overflow: hidden;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-size: 664px 65px; 
+  display: block;
+  position: relative;
+  z-index: 2; 
+}
+
+#menu-anime li.bouton1 a {
+  background-position: -3px -3px;
+  }
+#menu-anime li.bouton2 a {
+  background-position: -181px -3px;
+}
+#menu-anime li.bouton3 a {
+  background-position: -359px -3px; 
+}
+#menu-anime li.bouton4 a {
+  background-position: -537px -3px;
+}
+#menu-anime li.bouton5 a{
+  background-position: -3px -3px;
+}
+  
+#menu-anime li img.shadow { 
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sous-liste{
+  margin: 0 auto 50px auto;
+  width: 1000px;
+  min-height: 130px;
+  text-align: center;
+  list-style: none;
+}
+
+.item-menu a, .item-menu a:hover{
+  margin: 0 auto;
+  width: 122px; 
+  height: 59px;
+  padding-top: 15px;
+  text-indent: 0px; 
+  overflow: hidden;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-size: 664px 65px; 
+  display: block;
+  position: relative;
+  z-index: 2; 
 }

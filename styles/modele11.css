@@ -38,15 +38,11 @@ strong {
 }
 
 /* NICOLAS: Ajouté pour changer la couleur de fond quand on met la souris sur l'élément. */
+/*
 #navigation * ul a:hover {
   color: white;
   background-color: rgb(236, 68, 68);
-}
-
-#navigation a:hover,
-#navigation a:focus {
-  background: #3500d3;
-}
+}*/
 
 /* Contenu principal */
 #principal {
@@ -111,19 +107,18 @@ body {
   width: 180px;
 }
 #navigation ul {
-  margin: 0; /* NICOLAS: Changé pour enlever le margin. */
-  margin-left: 15px
-    /* NICOLAS: Ajouté pour créer une petite différence entre les sous-menus et menus. */;
+  margin: 0;
+   margin-left: 15px;
   list-style: none;
 }
-#navigation a {
+/*#navigation a {
   display: block;
   height: 1%;
   padding: 6px 10px 6px 10px;
   line-height: 1.5;
   font-size: 0.9em;
   text-decoration: none;
-}
+}*/
 
 /* Contenu principal */
 #principal {
